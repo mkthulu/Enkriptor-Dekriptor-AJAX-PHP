@@ -9,6 +9,8 @@ $output = '-';
 if ($q !== '') {
   if ($encrypt = openssl_encrypt($q, $cipher_method, $key, 0, $init_vector)) {
     $output = $encrypt;
+  } else {
+    $output = 'Tidak terdapat hasil yang cocok.';
   }
 }
 
