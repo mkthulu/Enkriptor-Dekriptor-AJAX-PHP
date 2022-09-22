@@ -18,6 +18,7 @@
 body {
   font-size: 1.25rem;
   font-family: var(--ff-400);
+  background-color: hsl(200, 3%, 19%);
 }
 
 fieldset {
@@ -100,14 +101,29 @@ label:has(.spreader:checked) {
 
 #encryptor-decryptor {
   margin: 3rem auto;
+  background-color: white;
+  padding: 3rem 2rem;
+  box-shadow: 0 0 1.5rem hsla(0, 0%, 0%, 0.375);
+  border-radius: 0.375rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 60ch) {
+  body {
+    background-color: white;
+  }
+
   label:has(.spreader) {
     display: block;
   }
 
   label:has(.spreader) + label:has(.spreader) {
     margin-left: 0;
+  }
+
+  #encryptor-decryptor {
+    margin: 3rem auto;
+    padding: 0;
+    background-color: white;
+    box-shadow: none;
   }
 }
