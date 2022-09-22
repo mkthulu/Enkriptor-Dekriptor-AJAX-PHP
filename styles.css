@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Yrsa&display=swap");
+
+:root {
+  --ff-400: "Yrsa", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: var(--ff-400);
+}
+
+fieldset {
+  border: none;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+  width: 100%;
+  resize: none;
+  margin: 1rem 0 0;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-family: var(--ff-400);
+  border-radius: 0.5rem;
+  border: 1px solid black;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  font-family: var(--ff-400);
+}
+
+textarea {
+  min-height: 10rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+label:has(.spreader) {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: white;
+  color: black;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+label:has(.spreader) + label:has(.spreader) {
+  margin-left: 1rem;
+}
+
+label:has(.spreader:checked) {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  width: 85%;
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.title {
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.description {
+  line-height: 1.4;
+  margin-bottom: 3rem;
+}
+
+.spreader {
+  display: none;
+}
+
+#encryptor-decryptor {
+  margin: 3rem auto;
+}
+
+@media (max-width: 400px) {
+  label:has(.spreader) {
+    display: block;
+  }
+
+  label:has(.spreader) + label:has(.spreader) {
+    margin-left: 0;
+  }
+}
